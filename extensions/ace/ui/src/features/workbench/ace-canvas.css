@@ -1,0 +1,123 @@
+/* Palette and motion follow the original ACE canvas; scoped to the extension. */
+.ace-app {
+  --ink: #d7deec;
+  --muted: #93a0b6;
+  --line: #212a3d;
+  --surface: #111725;
+  --soft: #151c2c;
+  --accent: #5b7cfa;
+  --accent-soft: #8fa8ff;
+  container-type: inline-size;
+  color-scheme: dark;
+  height: max(520px, calc(100dvh - 264px));
+  min-height: 520px;
+}
+.ace-app button, .ace-app input, .ace-app select, .ace-app textarea,
+.ace-app .inspector, .ace-app .article-editor { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.ace-app button:hover { background: var(--soft); border-color: #3c4b69; }
+.ace-app button.primary:hover { background: #4967d8; }
+.ace-app label { color: #b8c5d9; }
+.ace-app .workbench-header { padding: 12px 16px; }
+.ace-app .brand-mark { background: #5b7cfa20; }
+.ace-app .brand-title { flex: 1; min-width: 0; }
+.ace-app .brand-title h1 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 16px; }
+.ace-app .brand-title small { font-size: 10px; }
+.ace-app .workbench-toolbar { min-height: 48px; padding: 0 12px; }
+.ace-app .tab { padding: 12px 10px; }
+.ace-app .node-library { background: #0d111c; padding-top: 14px; }
+.ace-app .palette-item:hover { background: #5b7cfa18; color: #aabaff; }
+.ace-app .canvas-layout { position: relative; display: flex; }
+.ace-app .node-library { flex: 0 0 180px; width: 180px; }
+.ace-app .flow-region { flex: 1; min-height: 0; background: #080b13; }
+.ace-app .library-toggle { position: absolute; top: 10px; left: 10px; z-index: 5; padding: 6px 8px; font-size: 11px; }
+.ace-app .canvas-layout > .inspector { position: absolute; right: 0; top: 0; bottom: 0; z-index: 10; }
+.ace-app .canvas-legend { background: #111725e8; color: var(--muted); }
+.ace-app .legend-data { background: #38bdf8; }
+.ace-app .legend-agent { background: #fb923c; }
+.ace-app .legend-delivery { background: #a78bfa; }
+.ace-app .ace-node {
+  --node-accent: #38bdf8;
+  --node-soft: #8cc9ff;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, #151c2c, #111725);
+  border-color: #2c3750;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px #0003;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.ace-app .ace-node.lane-agent { --node-accent: #fb923c; --node-soft: #ffc98a; }
+.ace-app .ace-node.lane-delivery { --node-accent: #a78bfa; --node-soft: #c8b8ff; }
+.ace-app .ace-node .node-meta { color: var(--node-accent); }
+.ace-app .ace-node:hover { border-color: var(--node-accent); box-shadow: 0 8px 24px #0006; }
+.ace-app .ace-node.selected {
+  outline: none;
+  border-color: var(--node-accent);
+  background: radial-gradient(at 20% 0%, color-mix(in srgb, var(--node-accent) 18%, transparent), transparent 70%), #111725;
+  box-shadow: 0 0 0 1px var(--node-accent), 0 8px 24px #0006;
+}
+.ace-app .ace-node.disabled { opacity: .5; }
+.ace-app .ace-node.state-running { border-color: var(--node-soft); box-shadow: 0 0 18px color-mix(in srgb, var(--node-accent) 35%, transparent); }
+@property --ace-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+.ace-app .ace-node.state-running::after {
+  content: ""; position: absolute; inset: -2px; border-radius: 16px; padding: 2px;
+  background: conic-gradient(from var(--ace-angle), var(--node-soft), transparent 20%, transparent 80%, var(--node-soft));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+  pointer-events: none; animation: ace-spin 2.2s linear infinite;
+}
+.ace-app .ace-node.state-running .status-dot { background: var(--node-accent); animation: ace-breathe 2s ease-in-out infinite; }
+.ace-app .ace-node.state-succeeded { border-color: #2b9e7b; background: radial-gradient(at 20% 0%, #2dd4a71a, transparent 70%), #0f1918; }
+.ace-app .ace-node.state-failed { border-color: #f43f5e; box-shadow: 0 0 0 1px #f43f5e60; }
+.ace-app .ace-node.state-blocked { border-color: #f0a55a; }
+.ace-app .react-flow__handle { border-color: var(--node-soft); background: var(--node-accent); width: 10px; height: 10px; }
+.ace-app .react-flow__edge-path { stroke: #5b7cfa; stroke-width: 1.6; }
+.ace-app .react-flow__edge:hover .react-flow__edge-path { stroke: #f0788a; stroke-width: 2.5; }
+.ace-app .react-flow__edge.selected .react-flow__edge-path,
+.ace-app .running-edge .react-flow__edge-path { stroke: #22d3ee; stroke-width: 2.5; stroke-dasharray: 12 6; animation: ace-flow .65s linear infinite; }
+.ace-app .react-flow__edge-textbg { fill: #111725; }
+.ace-app .react-flow__edge-text { fill: #b8c5d9; }
+.ace-app .react-flow__node-group { background: #151c2c66; border: 1px solid #2c3750; color: #9baacc; }
+.ace-app .react-flow__minimap { background: #111725; border: 1px solid var(--line); }
+.ace-app .react-flow__minimap-mask { fill: #080b1399; }
+.ace-app .react-flow__minimap-node { fill: #5b7cfa; }
+.ace-app .react-flow__controls button { color: #d7deec; fill: currentColor; border-color: var(--line); }
+.ace-app .react-flow__controls button svg { fill: currentColor; }
+.ace-app .table-scroll, .ace-app th, .ace-app td { border-color: var(--line); }
+.ace-app th, .ace-app .original-content, .ace-app .run-history, .ace-app .article-revision { background: #0d111c; color: #a8b6cc; }
+.ace-app tr:hover td, .ace-app .selected-row td, .ace-app .run-item.active { background: #1b2740; }
+.ace-app .notice-banner { background: #10271f; color: #7fe3c4; }
+.ace-app .error-banner { background: #351721; color: #ff9dad; }
+.ace-app .article-title { color: #d7deec; }
+.ace-app .workbench-footer { background: #0d111c; }
+.ace-app .run-item, .ace-app .run-progress, .ace-app .task-context { background: var(--surface); border-color: var(--line); }
+.ace-app .risk-badge.low, .ace-app .review-badge.approved { background: #15352b; color: #7fe3c4; }
+.ace-app .risk-badge.medium, .ace-app .review-badge.pending { background: #342b1a; color: #ffcf8e; }
+.ace-app .risk-badge.high, .ace-app .review-badge.rejected { background: #391b28; color: #ff9dad; }
+@keyframes ace-spin { to { --ace-angle: 360deg; } }
+@keyframes ace-flow { to { stroke-dashoffset: -18; } }
+@keyframes ace-breathe { 50% { box-shadow: 0 0 0 5px #5b7cfa22; opacity: .6; } }
+@container (max-width: 900px) {
+  .ace-app .node-library { display: block; position: absolute; top: 44px; bottom: 0; left: 0; z-index: 8; box-shadow: 6px 0 24px #0006; }
+  .ace-app .inspector { position: absolute; top: 0; bottom: 0; right: 0; z-index: 10; }
+  .ace-app .canvas-with-inspector { position: relative; }
+  .ace-app .toolbar-actions { margin: 0 0 8px auto; }
+}
+@container (max-width: 500px) {
+  .ace-app .canvas-legend, .ace-app .brand-mark { display: none; }
+  .ace-app .workbench-header { padding: 10px; }
+  .ace-app .toolbar-actions { flex-wrap: wrap; justify-content: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ace-app .ace-node::after, .ace-app .ace-node .status-dot, .ace-app .react-flow__edge-path { animation: none !important; }
+}
+.ace-app .report-document {
+  width: 100%;
+  min-height: 640px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .ace-app { height: max(520px, calc(100dvh - 320px)); }
+  .ace-app:fullscreen { height: 100dvh; }
+}

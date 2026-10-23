@@ -1,0 +1,21 @@
+{
+  "source_head": "26993007caa7869bf10ddf0b29ec94f814145213",
+  "files": [
+    {
+      "file": "gsdata_es.py",
+      "sha256": "edb855718209ff2df55f63a648fbb23b56d0aba22258e0859095387d819196c7",
+      "source": "ACE/agent_framework/integrations/gsdata_es.py"
+    },
+    {
+      "file": "es_clusters.py",
+      "sha256": "96b7cbb6afd7e85df969d6ed628e86e2ad20a28b011eba143335f60447022fca",
+      "source": "ACE/agent_framework/integrations/es_clusters.py"
+    },
+    {
+      "file": "es_record_fields.py",
+      "sha256": "8ab8f90289685087a6f7b4e1319e1d080cb4ceb1559e2fa67a074f4bd95542a8",
+      "source": "ACE/agent_framework/integrations/es_record_fields.py"
+    }
+  ],
+  "policy": "只读协议快照；保持原始字节，不作为新业务实现修改。适配层位于 resources。"
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deerflow-extension-ace"
+version = "0.1.0"
+description = "ACE durable canvas, data queue and alert workbench for DeerFlow"
+requires-python = ">=3.12"
+dependencies = [
+  "deerflow-extension-api>=0.2.8", "sqlalchemy>=2.0", "pymysql>=1.1",
+  "redis>=5", "pydantic-settings>=2", "croniter>=6", "httpx>=0.28",
+  "python-docx>=1.2",
+  "requests>=2.32", "huaweicloudsdkcore>=3.1",
+]
+
+[project.entry-points."deerflow.extensions"]
+ace = "ace_ext:install"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ace_ext"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"ace_ext/static/dist" = "ace_ext/static/dist"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["ace_ext/vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/bytedance/deer-flow",
+  "commit": "66508d7522015ab6582105130da691e2803eba0d",
+  "branch": "main",
+  "version": "2.2.0-dev",
+  "files": 4228,
+  "verified_at": "2026-10-22T12:48:09.706934+00:00",
+  "verification": "Every file matches GitHub Git blob SHA-1 at fixed commit"
+}

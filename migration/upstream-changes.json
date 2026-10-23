@@ -1,0 +1,266 @@
+{
+  "backend/app/gateway/routers/plugins.py": {
+    "reason": "公开已注册扩展工具的声明供能力中心展示，不授予执行权限",
+    "original_blob": "9e84c7ecb299b5e5f09903f9f95a452b86fb67e4",
+    "original_lines": 158,
+    "current_lines": 162,
+    "net_added": 4,
+    "sha256": "96e52776feae2e9200821be5fdca72cb24ec02319dc0681032a4118fd19a1dd7"
+  },
+  "frontend/src/core/extensions/api.ts": {
+    "reason": "解析扩展工具公开声明",
+    "original_blob": "2606c1dc588ab1b3a0a48e9c008a64258234d140",
+    "original_lines": 30,
+    "current_lines": 39,
+    "net_added": 9,
+    "sha256": "e8f0a95fc6fad00d4f943fdbe4ecb86ff2ba30d172d2c8410000d7863e2d7622"
+  },
+  "frontend/src/core/extensions/contracts.ts": {
+    "reason": "扩展工具目录类型",
+    "original_blob": "3da8a4f444e99c029c043c300143c94c5f74a62c",
+    "original_lines": 105,
+    "current_lines": 111,
+    "net_added": 6,
+    "sha256": "b0b0c44b803a15f1d5411efb7a0c2c3eec6b1e79f48fa3d396e0ed84db5bd6b4"
+  },
+  "frontend/src/components/workspace/capabilities/extension-gallery.tsx": {
+    "reason": "扩展详情显示工具及参数，搜索支持算子名称",
+    "original_blob": "207c8229a809fcc0aae562904ca55e38c967fe5d",
+    "original_lines": 142,
+    "current_lines": 147,
+    "net_added": 5,
+    "sha256": "f9afa30ccd5affcb69f22a4f7cc6853181e9394ce808d91ea60c61444900f9d2"
+  },
+  "backend/tests/test_migration_0047_mcp_oauth_tokens.py": {
+    "reason": "迁移单链头前移至0048，保留0047升级降级测试",
+    "original_blob": "be565b596d4b4b611f0eb45319cb74b3faa567a9",
+    "original_lines": 186,
+    "current_lines": 187,
+    "net_added": 1,
+    "sha256": "5054549e128379dde01068d0a23a81cb4da710539591a2126050b5e43a5b1328"
+  },
+  "backend/tests/test_run_origin.py": {
+    "reason": "定时启动来源测试补充已持久化任务契约",
+    "original_blob": "62963aa5595ddebb79aba6aa7ff098426e3ad2ee",
+    "original_lines": 439,
+    "current_lines": 443,
+    "net_added": 4,
+    "sha256": "98cf22f22d3a6e35c4d7a92f5bf1ffb1c60ef133e140df0994ea24a79b1d5a1a"
+  },
+  "backend/tests/test_scheduled_task_router_behavior.py": {
+    "reason": "复用对话测试补充项目元数据读取契约",
+    "original_blob": "717e48644109e3fecea9be8eaa92690e97db1246",
+    "original_lines": 1848,
+    "current_lines": 1849,
+    "net_added": 1,
+    "sha256": "ee645d8e95b44921e65c460e94e7a46c4fb8450f924274229e98dd7dbfba648f"
+  },
+  "backend/tests/test_gateway_services.py": {
+    "reason": "定时启动载荷单测隔离新增项目准备步骤",
+    "original_blob": "71facbd9baa088126b95732644c9c7eec0bf6f75",
+    "original_lines": 5818,
+    "current_lines": 5818,
+    "net_added": 0,
+    "sha256": "54e78d513557af66b536d99a93f91a68155342faa70f3d841018c16b5de42e9b"
+  },
+  "frontend/tests/unit/components/workspace/scheduled-tasks/task-form-dialog.dom.test.tsx": {
+    "reason": "项目选择必填与锁定归属回归",
+    "original_blob": "8e98b28f6cd5fb14b510f7d584aa8faf77cb1324",
+    "original_lines": 926,
+    "current_lines": 952,
+    "net_added": 26,
+    "sha256": "45dc0b0097e86c5f2eafc1eb3e5c4b975e81e386982105d9f4403624dfe78582"
+  },
+  "frontend/src/core/scheduled-tasks/api.ts": {
+    "reason": "定时任务项目字段传输",
+    "original_blob": "180d299702744e32e7da02714498793e82b29a5c",
+    "original_lines": 210,
+    "current_lines": 211,
+    "net_added": 1,
+    "sha256": "89be4f9b054460e525d3dece6bfce607aff4a91a840e355e7da7281cd78b3f5a"
+  },
+  "frontend/src/core/scheduled-tasks/types.ts": {
+    "reason": "定时任务项目字段类型",
+    "original_blob": "be3279a7fdbfadd1675e7e09ed054812bfca0e42",
+    "original_lines": 147,
+    "current_lines": 148,
+    "net_added": 1,
+    "sha256": "5bf171c354fb13ec0f588e0812abc5d6318cb5be0f54162c26743894d91d08c4"
+  },
+  "frontend/src/components/workspace/scheduled-tasks/task-form-dialog.tsx": {
+    "reason": "定时任务表单选择所属项目",
+    "original_blob": "19a0f83a2ce8e49b7d6e83260ddea40b9a828747",
+    "original_lines": 829,
+    "current_lines": 842,
+    "net_added": 13,
+    "sha256": "630b9848d1e5a40b667d148066d0e81a80095ccf7986f26f98a7e8c42525ae57"
+  },
+  "backend/packages/harness/deerflow/persistence/scheduled_tasks/sql.py": {
+    "reason": "保存定时任务项目归属",
+    "original_blob": "7c910ec6cf7f509e7524ed7095fa731ab3fd7568",
+    "original_lines": 1021,
+    "current_lines": 1023,
+    "net_added": 2,
+    "sha256": "e4ade1d05618077b6941ac1f939e9dab2f270f33c595c0302898dbb597fade8f"
+  },
+  "backend/packages/harness/deerflow/persistence/scheduled_tasks/model.py": {
+    "reason": "持久化定时任务项目归属",
+    "original_blob": "96a7f1ec3f51f1960c6debf708d807689489655a",
+    "original_lines": 104,
+    "current_lines": 105,
+    "net_added": 1,
+    "sha256": "5508e24a7da3a63e3f30bdbdd5f680a95f8125b9bf2e5d16d538f4aa5708fb75"
+  },
+  "backend/app/gateway/scheduled_task_access.py": {
+    "reason": "对话创建的定时任务继承项目",
+    "original_blob": "6a717ce6b4d2c2fc9b8483152966b22840289e25",
+    "original_lines": 688,
+    "current_lines": 693,
+    "net_added": 5,
+    "sha256": "75d8633bb1f227d097ade094b78e197c4565b6c3412d0f26dbeaaeb7cdd493c0"
+  },
+  "backend/app/gateway/services.py": {
+    "reason": "定时运行前建立项目对话并检查部署权限",
+    "original_blob": "0b2cb6d31c7b7999b6ca085b91dde70489cf8bcd",
+    "original_lines": 3055,
+    "current_lines": 3058,
+    "net_added": 3,
+    "sha256": "89439ebf5a5608d662404fa12a4df2aab4f41921c5e71b81cb739be68423adc3"
+  },
+  "backend/app/gateway/routers/scheduled_tasks.py": {
+    "reason": "定时任务显式项目归属与项目级列表过滤",
+    "original_blob": "3cf3ba694a369c834ee9030ff0bb152513d6da6f",
+    "original_lines": 518,
+    "current_lines": 537,
+    "net_added": 19,
+    "sha256": "9dcbbec17ecbf699e4c5d28c30c6e8c89e89336ae63e04fd1bba4ce080790a90"
+  },
+  "backend/pyproject.toml": {
+    "reason": "原生扩展管理器安装 ACE 包",
+    "original_blob": "83394f1a2cf7d1b4f757aed1a8996fc913a22dbb",
+    "original_lines": 119,
+    "current_lines": 122,
+    "net_added": 3,
+    "sha256": "357a310e8de8910b8ef171ee602100d1215a3d408a99e7d6ccbbcc22d3bfd72e"
+  },
+  "backend/uv.lock": {
+    "reason": "原生扩展管理器维护依赖锁",
+    "original_blob": "f8c086d3c913d9ce89f4d969ce99af742f1fd375",
+    "original_lines": 5504,
+    "current_lines": 5720,
+    "net_added": 216,
+    "sha256": "ed5343303b06d5e025afc7679bcdd915dfdc649cf125863e421bad5f8b0a22fe"
+  },
+  "backend/app/gateway/auth_middleware.py": {
+    "reason": "通用部署授权钩子",
+    "original_blob": "b2c01e40b0a98e031571ad3f398f207a07805ea5",
+    "original_lines": 231,
+    "current_lines": 236,
+    "net_added": 5,
+    "sha256": "87613bae41009f5690d21b7f2a4ef2d94bb709f4ee87512ab817b4efa52a7bab"
+  },
+  "backend/app/gateway/authz.py": {
+    "reason": "可选请求内批量权限钩子，避免重复读取团队成员关系",
+    "original_blob": "0275556e5eead83238ffcbf7583edb3dd43d2e80",
+    "original_lines": 1080,
+    "current_lines": 1085,
+    "net_added": 5,
+    "sha256": "73d487a43d21fb838f773a5d78616f698634dea408db8f6342a9c5844eb916cd"
+  },
+  "backend/app/gateway/routers/personal_mcp.py": {
+    "reason": "普通用户内置能力安装兼容未提供的 cwd 扩展字段",
+    "original_blob": "af560060d8858b317b32a6f1e19d707b5d3d51c5",
+    "original_lines": 131,
+    "current_lines": 131,
+    "net_added": 0,
+    "sha256": "549e484c1dfb9227d9e98a44aca30406641b18dec79ffca08e4b5f73b9fe30a5"
+  },
+  "backend/packages/harness/deerflow/integrations/lark_cli.py": {
+    "reason": "Windows 中文用户名输出与 ASCII SID 解析隔离",
+    "original_blob": "9dfdfd8e06d8c0a86de35bae783c0b4b76a0a851",
+    "original_lines": 3707,
+    "current_lines": 3710,
+    "net_added": 3,
+    "sha256": "047bb98a481b1e918c39b9b60a84735c983191d54ec8081f36b1ae79589e9f1e"
+  },
+  "backend/app/gateway/routers/threads.py": {
+    "reason": "部署授权过滤线程列表",
+    "original_blob": "fd5d8ac6a7251563bc433f8592cca88d671dcb53",
+    "original_lines": 2057,
+    "current_lines": 2060,
+    "net_added": 3,
+    "sha256": "c3d72152c76ee1ebf0e40c9849638ac4bc27207e3ace376845ecf4325ab36f34"
+  },
+  "backend/app/gateway/routers/projects.py": {
+    "reason": "部署授权过滤项目列表",
+    "original_blob": "7c43e57e76da3b4652fd9fe6727a2ea9d894547b",
+    "original_lines": 214,
+    "current_lines": 217,
+    "net_added": 3,
+    "sha256": "38e1fc2d1971ec33ab3670663df4118051e5fdb336626f093e95b2e60a4afab6"
+  },
+  "backend/app/gateway/routers/thread_activity.py": {
+    "reason": "部署授权过滤线程活动",
+    "original_blob": "61d2be0f6613f1c5ca7142b2a4765e4c3d15fb44",
+    "original_lines": 120,
+    "current_lines": 123,
+    "net_added": 3,
+    "sha256": "1e656b96c26f06639deb2f61ed24a8b64b3dc06d44a5b6d43ef8418400b032fb"
+  },
+  "frontend/src/app/workspace/workspace-content.tsx": {
+    "reason": "团队访问边界装配",
+    "original_blob": "b60f9202e719e82c5b5eab1416b2ac238400892e",
+    "original_lines": 54,
+    "current_lines": 60,
+    "net_added": 6,
+    "sha256": "290f02bd23ec291187dce373629e5d061e7aaabab89072ea321f0cee8cadab9b"
+  },
+  "frontend/src/components/workspace/workspace-sidebar.tsx": {
+    "reason": "团队切换与项目成员入口",
+    "original_blob": "f41bbad3d7112e3e13bf09b55a641c7e8d6cf268",
+    "original_lines": 67,
+    "current_lines": 86,
+    "net_added": 19,
+    "sha256": "c56f3b6f78a1a5245205e403f4067133a4d5344a94351b628180035d31b4b4a4"
+  },
+  "frontend/src/app/workspace/projects/[id]/page.tsx": {
+    "reason": "项目内画布标签页",
+    "original_blob": "60dd35a08db4b51a4239a43b56c5398c31baabde",
+    "original_lines": 447,
+    "current_lines": 467,
+    "net_added": 20,
+    "sha256": "ce9f82eea362d440b4e2fee11fe8b5b8a75f4b565dd289b41d2347e7221bc94c"
+  },
+  "frontend/src/app/workspace/agents/[agent_name]/chats/[thread_id]/page.tsx": {
+    "reason": "Agent 对话绑定所选项目",
+    "original_blob": "49134d7aa446316e01c7e8f37425999f0418e908",
+    "original_lines": 737,
+    "current_lines": 746,
+    "net_added": 9,
+    "sha256": "db6c62dc45bcb9cc5349a2f0508455a8f4337e8cc2a9b2a8f6c2951d67b16b2d"
+  },
+  "frontend/src/app/workspace/agents/new/page.tsx": {
+    "reason": "Agent 创建对话绑定所选项目",
+    "original_blob": "aae536c6be40d6318cd79db3ae101d43d5da7923",
+    "original_lines": 482,
+    "current_lines": 491,
+    "net_added": 9,
+    "sha256": "e1084bf51ed94dc2d83c11b7ad1ad829174536150dd6c0b72115cf4af7228963"
+  },
+  "backend/app/gateway/AGENTS.md": {
+    "reason": "记录部署授权接口维护契约",
+    "original_blob": "2da931f5ac87a7ba0572b7f29816dd96c777b825",
+    "original_lines": 261,
+    "current_lines": 288,
+    "net_added": 27,
+    "sha256": "144006608eefff62e3a77b64125d7c2c3065c7f245a8d53572cb171bd52ecc91"
+  },
+  "frontend/AGENTS.md": {
+    "reason": "记录团队项目集成边界",
+    "original_blob": "0b58946a46338ac69e66316a307b683d49373fac",
+    "original_lines": 432,
+    "current_lines": 444,
+    "net_added": 12,
+    "sha256": "4ede61831a3fbae3ba465cb709968f328e9aed3cf544e37ad23ae2b9580474f7"
+  }
+}

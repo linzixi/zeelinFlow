@@ -1,0 +1,63 @@
+{
+  "sis.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\sis.py",
+    "sha256": "5c6c4d1be0a677f100e3a54f58e4f0a3540ba20595ad9579ddd10b49d2a607f6",
+    "mode": "verbatim"
+  },
+  "huawei_asr.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\huawei_asr.py",
+    "sha256": "42633e23559eeefee3b45c591a4313f16f86cbaa910dfc68a48d206dbfad41ef",
+    "mode": "verbatim"
+  },
+  "canvas_defaults.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\canvas_defaults.py",
+    "sha256": "57334d28ecdfe43f6fd329f47f9ae6ee15a96af4ec8ab07adbf9b5cb68d88ece",
+    "mode": "verbatim"
+  },
+  "card.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\feishu.py",
+    "sha256": "9fc6c597494a1f2c8386bdea7bb12cce69a92b2d09c4d0ec8eb4f5d528875e6b",
+    "functions": [
+      "_text",
+      "_integer",
+      "_json_value",
+      "_option_names",
+      "_select",
+      "_business_car_model",
+      "_question_type",
+      "_media_attribute",
+      "_is_video",
+      "_safe_url",
+      "_markdown_text",
+      "_build_article_card",
+      "select_article_related_links",
+      "build_article_card"
+    ],
+    "mode": "verbatim function extraction; imports and constants adapted; sending excluded"
+  },
+  "rules:pipeline.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\pipeline.py",
+    "sha256": "4048fa7bd02d57dd71de258150ef3407a67a2091bf60ff2315c866891bdab239",
+    "functions": [
+      "_integer",
+      "_values",
+      "_delivery_open",
+      "_skip_reason",
+      "_is_video"
+    ]
+  },
+  "rules:database.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\database.py",
+    "sha256": "3fc23438e17b877c46941cf36e39bf0413f4de591d3332255eb071aa057fc255",
+    "functions": [
+      "_string_values",
+      "_sina_delivery_allowed",
+      "_title_hash"
+    ]
+  },
+  "config.py": {
+    "source": "..\\ACE\\agent_framework\\sgm\\canvas_config.py",
+    "sha256": "d81d1585ce9bf601f868cad01174ec5e6afd98b4becbb477756a526dc7f7fd00",
+    "mode": "verbatim config functions"
+  }
+}
